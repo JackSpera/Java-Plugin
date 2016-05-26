@@ -1,0 +1,83 @@
+name: PrivateItem
+main: io.jackspera.privateitem.Main
+version: 1.0
+commands:
+   private:
+      description: Private your item.
+      usage: |
+        Privatize your items.
+         /private <all|remove>
+         /private slot <number of slot>
+          REMOVE:Remove privatize.
+          SLOT:Privatize a slot.
+          ALL:Privatize all inventory.
+   oprivate:
+     description: Help you to set option.
+     usage: |
+       Change config.
+        /oprivate <set|add|remove|infinite> <Player> <value>
+        /oprivate <setMax> <maxPrivate>
+        SET:Set to a player privatizable items.
+        ADD:Add to a player privatizable items.
+        REMOVE:Remove to a player privatizable items.
+        INFINITE:Set to a Player infinite privatizable items.
+        SETMAX:Set default privatizable item.
+        
+permission:
+  js.privateitem.user.*:
+    default: true
+    children:
+      js.privateitem.user.handPrivate: true
+      js.privateitem.user.allPrivate: true
+      js.privateitem.user.slotPrivate: true
+      js.privateitem.user.removePrivate: true
+  js.privateitem.op.*:
+    default: op
+    children:
+      js.privateitem.op.set: true
+      js.privateitem.op.add: true
+      js.privateitem.op.remove: true
+      js.privateitem.op.infinite: true
+      js.privateitem.op.setMax: true
+      js.privateitem.op.help: true
+      
+  js.privateitem.user.handPrivate:
+    description: Privatize an item.
+    default: true
+  js.privateitem.user.allPrivate:
+    description: Privatize all item in inventory.
+    default: true
+  js.privateitem.user.slotPrivate:
+    description: Privatize an item in slot.
+    default: true
+  js.privateitem.user.removePrivate:
+    description: Remove private.
+    default: true
+    
+    
+    
+  js.privateitem.op.set:
+    description: Set to a player privatizable items.
+    default: op
+  js.privateitem.op.add:
+    description: Add to a player privatizable items.
+    default: op
+  js.privateitem.op.remove:
+    description: Remove to a player privatizable items.
+    default: op
+  js.privateitem.op.infinite:
+    description: Set to a Player infinite privatizable items.
+    default: op
+  js.privateitem.op.help:
+    description: Send to you helper message.
+    default: op
+  js.privateitem.op.setMax:
+    description: Set default privatizable item.
+    default: op
+  
+  
+  
+  
+  
+  
+  
