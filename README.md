@@ -1,2 +1,2 @@
-# Java-Plugin
+# Minecraft Plugin
 Qui puoi trovare i miei plugin per Minecraft
